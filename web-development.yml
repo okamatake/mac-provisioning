@@ -1,7 +1,7 @@
 - hosts: localhost
   connection: local
   gather_facts: no
-  sudo: no
+  become: no
   roles:
     - homebrew
     - homebrew-cask
@@ -25,7 +25,6 @@
     homebrew_packages:
       - readline
       - openssl
-      - { name: openssl, state: linked, install_options: force }
       - ansible
       - git
       - git-flow

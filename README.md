@@ -9,6 +9,22 @@ Usage
 2. edit playbook. list the managed software to variable.
 3. run `ansible-playbook`
 
+Edit .bash_profile
+------------------
+
+Add the following 3 lines to the `.bash_profile` file:
+
+```
+export HOMEBREW_CASK_OPTS="--appdir=/Applications"
+export PATH=$(brew --prefix)/opt/openssl/bin:$PATH
+export PKG_CONFIG_PATH=$(brew --prefix)/opt/openssl/lib/pkgconfig
+```
+
+Reload `.bash_profile`
+
+```
+$ source .bash_profile
+```
 
 Example Playbook
 ----------------
